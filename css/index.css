@@ -1,0 +1,103 @@
+:root {
+    
+    font-size: 16px;
+    --mainFont: 'Roboto', sans-serif;
+    --secondaryFont: 'Roboto Condensed', sans-serif;
+    --white: #ffffff; 
+    --black-1: #202020; 
+    --primary: #1b90fc; 
+    --grey: #929292; 
+    --headline1: 700 2.5rem/normal var(--secondaryFont); 
+    --subtitle1: 700 1.625rem/1.5rem var(--secondaryFont); 
+    --button: 700 0.875rem/1rem var(--mainFont); 
+    --headline2: 700 1.5rem/normal var(--secondaryFont); 
+    --body1-regular: 400 1rem/1.5rem var(--mainFont); 
+    --body1-bold: 700 1rem/1.5rem var(--mainFont); 
+    --body2-bold: 700 0.875rem/1.5rem var(--mainFont); 
+    --body2-regular: 400 0.875rem/1.5rem var(--mainFont); 
+    --caption-regular: 400 0.75rem/1.5rem var(--mainFont); 
+    --caption-bold: 700 0.75rem/1.5rem var(--mainFont);
+
+}
+
+body {
+    margin: 0;
+    font-family: var(--mainFont);
+}
+
+h1, p {
+    margin: 0;
+}
+
+img {
+    max-inline-size: 100%;
+    vertical-align: middle;
+}
+
+button {
+    background: var(--primary);
+    color: var(--white);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    text-transform: uppercase;
+    font: var(--button);
+    border: none;
+    border-radius: 3.25rem;
+    cursor: pointer;
+}
+
+.hero {
+    /* border: 5px solid red; */
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--black-1);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+}
+
+.hero::before {
+    content: '';
+    background-color: var(--black-1);
+    position: absolute;
+    z-index: 1;
+    display: block;
+    inline-size: 50%;
+    inset-block: 0;
+    clip-path: polygon(0 0, calc(100% - 151px) 0, 100% 100%, 0 100%);
+}
+
+.hero h1 {
+    font: var(--headline1);
+    text-transform: uppercase;
+    /* color: var(--white); */
+    margin-block-end: .5rem;
+    margin-block-start: 1.5rem;
+}
+
+.hero p {
+    font: var(--body1-regular);
+    margin-block-end: 1.5rem;
+}
+
+.wrapper {
+    max-inline-size: 104rem; /*1664*/
+    margin: auto;
+    /* border: 5px solid green; */
+    /* overflow: hidden; */
+}
+
+.hero-content {
+    /* border: 5px solid blue; */
+    block-size: 768px;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    max-inline-size: 25.75rem;
+    color: var(--white);
+    position: relative;
+    z-index: 2;
+}
+
